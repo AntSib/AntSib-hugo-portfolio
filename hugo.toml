@@ -1,4 +1,4 @@
-baseURL = '/'
+baseURL = 'https://antsib.github.io/AntSib-hugo-portfolio/'
 languageCode = 'en-us'
 title = 'AntSib Portfolio'
 theme = "hugo-theme-m10c"
