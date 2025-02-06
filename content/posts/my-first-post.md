@@ -1,6 +1,6 @@
 +++
 title = 'My First Post'
-date = 2025-02-06T07:07:07+01:00
+date = 2025-02-05T07:16:41:25+03:00
 +++
 ## Introduction
 
