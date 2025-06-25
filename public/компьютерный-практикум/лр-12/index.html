@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en-us">
+  <head><script src="/AntSib-hugo-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=AntSib-hugo-portfolio/livereload" data-no-instant defer></script>
+    <title>Практическая работа №12 - Тема Yandex Serverless // AntSib Portfolio</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.147.3">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Сибилев А.И." />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/AntSib-hugo-portfolio/css/main.min.5b1fcc8902588589c4767187402a3c29f8b8d7a6fdef6d9f8f77045bb0d14fee.css" />
+    
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Практическая работа №12 - Тема Yandex Serverless">
+  <meta name="twitter:description" content="Отчёт Репозиторий с исходным кодом
+Постановка задачи Развернуть Yandex Serverless приложение для преобразования картинок и их отображения EXIF-данных
+Отчёт Структура проекта project/├── main.py # Основной файл приложения Flask├── requirements.txt # Зависимости├── Dockerfile # Инструкция сборки образа└── templates/├── index.html└── image-convert.html Сборка docker-контейнера Dockerfile
+FROM python:3.12-alpine COPY ./requirements.txt /app/requirements.txt WORKDIR /app RUN pip install --upgrade pip &amp;&amp; \ pip install -r requirements.txt COPY . /app EXPOSE 5000 CMD [ &#34;python&#34;, &#34;main.py&#34; ] Авторизация для доступа к реестру">
+
+    <meta property="og:url" content="http://localhost:1313/AntSib-hugo-portfolio/%D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D1%8B%D0%B9-%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D1%83%D0%BC/%D0%BB%D1%80-12/">
+  <meta property="og:site_name" content="AntSib Portfolio">
+  <meta property="og:title" content="Практическая работа №12 - Тема Yandex Serverless">
+  <meta property="og:description" content="Отчёт Репозиторий с исходным кодом
+Постановка задачи Развернуть Yandex Serverless приложение для преобразования картинок и их отображения EXIF-данных
+Отчёт Структура проекта project/├── main.py # Основной файл приложения Flask├── requirements.txt # Зависимости├── Dockerfile # Инструкция сборки образа└── templates/├── index.html└── image-convert.html Сборка docker-контейнера Dockerfile
+FROM python:3.12-alpine COPY ./requirements.txt /app/requirements.txt WORKDIR /app RUN pip install --upgrade pip &amp;&amp; \ pip install -r requirements.txt COPY . /app EXPOSE 5000 CMD [ &#34;python&#34;, &#34;main.py&#34; ] Авторизация для доступа к реестру">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="компьютерный-практикум">
+    <meta property="article:published_time" content="2025-06-06T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-06-06T00:00:00+00:00">
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="/AntSib-hugo-portfolio/"><img class="app-header-avatar" src="/AntSib-hugo-portfolio/avatar.jpg" alt="Сибилев А.И." /></a>
+      <span class="app-header-title">AntSib Portfolio</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/AntSib-hugo-portfolio/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/AntSib-hugo-portfolio/about/">About</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/AntSib-hugo-portfolio/%D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D1%8B%D0%B9-%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D1%83%D0%BC/">Компьютерный практикум</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/AntSib-hugo-portfolio/%D0%B2%D0%B5%D0%B1-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/">Веб-проектирование</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/AntSib-hugo-portfolio/%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80%D0%BD%D1%8B%D0%B5-%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8/">Серверные веб-технологии</a>
+      </nav>
+      <p>Портфолио работ, выполненный по направлениям Веб-проектирование, Серверные веб-технологии, Компьютерный практикум</p>
+      <div class="app-header-social">
+        
+          <a href="https://t.me/Noxpinch" target="_blank" rel="noreferrer noopener me">
+            <svg class="icon icon-brand-telegram" viewBox="0 0 24 24" fill="currentColor"><title>Telegram</title><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          </a>
+        
+          <a href="https://github.com/AntSib" target="_blank" rel="noreferrer noopener me">
+            <svg class="icon icon-brand-github" viewBox="0 0 24 24" fill="currentColor"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Практическая работа №12 - Тема Yandex Serverless</h1>
+      <div class="post-meta">
+        <div>
+          <svg class="icon icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          Jun 6, 2025
+        </div>
+        <div>
+          <svg class="icon icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>clock</title><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          1 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h2 id="отчёт">Отчёт</h2>
+<p><a href="https://github.com/AntSib/Computer_practicum/tree/main/%D0%9B%D0%A0-12">Репозиторий с исходным кодом</a></p>
+<h3 id="постановка-задачи">Постановка задачи</h3>
+<p>Развернуть Yandex Serverless приложение для преобразования картинок и их отображения EXIF-данных</p>
+<h2 id="отчёт-1">Отчёт</h2>
+<h3 id="структура-проекта">Структура проекта</h3>
+<pre tabindex="0"><code class="language-bach" data-lang="bach">project/
+├── main.py                # Основной файл приложения Flask
+├── requirements.txt       # Зависимости
+├── Dockerfile             # Инструкция сборки образа
+└── templates/
+    ├── index.html
+    └── image-convert.html
+</code></pre><h3 id="сборка-docker-контейнера">Сборка docker-контейнера</h3>
+<p>Dockerfile</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> python:3.12-alpine</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> ./requirements.txt /app/requirements.txt<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /app</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> pip install --upgrade pip <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    pip install -r requirements.txt<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> . /app<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">EXPOSE</span><span style="color:#e6db74"> 5000</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">CMD</span> [ <span style="color:#e6db74">&#34;python&#34;</span>, <span style="color:#e6db74">&#34;main.py&#34;</span> ]<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>Авторизация для доступа к реестру</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker login --username oauth --passwor-stdin &lt;OAuth-токен&gt; cr.yandex
+</span></span></code></pre></div><p>&lt;OAuth-токен&gt; - токен для доступа</p>
+<p>Сборка Docker-образа локально</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker build . -t cr.yandex/&lt;registry-id&gt;/flask-image-invertor-application:v0.0.2
+</span></span></code></pre></div><p><!-- raw HTML omitted --> - id реестра yandex.console.</p>
+<p>Публикация образа в реестре</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker push cr.yandex/&lt;registry-id&gt;/flask-image-invertor-application:v0.0.2
+</span></span></code></pre></div><p>После публикации образа был создан и настроен контейнер:</p>
+<ul>
+<li>Установлен опубликованный образ</li>
+<li>Выбран/создан аккаунт с базовой ролью container-registry.images.puller.</li>
+</ul>
+<p>После успешного запуска приложения, оно доступно по адресу <a href="https://bban2uh3s23cr29o1rot.containers.yandexcloud.net/">https://crprm94t2tmhgqqcd9ja.web.yandexcloud.net</a>
+<img src="demo/demo.png" alt="Демонстрация работы приложения"></p>
+<h3 id="вывод">Вывод</h3>
+<p>Проект успешно развёрнут в виде Docker-контейнера на Yandex.Cloud и предоставляет удобный веб-интерфейс для работы с изображениями и метаданными.</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

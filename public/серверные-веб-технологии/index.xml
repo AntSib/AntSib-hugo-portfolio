@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Серверные Веб-Технологииs on AntSib Portfolio</title>
+    <link>http://localhost:1313/AntSib-hugo-portfolio/%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80%D0%BD%D1%8B%D0%B5-%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8/</link>
+    <description>Recent content in Серверные Веб-Технологииs on AntSib Portfolio</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/AntSib-hugo-portfolio/%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80%D0%BD%D1%8B%D0%B5-%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Чекинаторы</title>
+      <link>http://localhost:1313/AntSib-hugo-portfolio/%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80%D0%BD%D1%8B%D0%B5-%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8/%D0%BF%D1%80%D0%B5%D0%BA%D1%82%D1%8B/</link>
+      <pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/AntSib-hugo-portfolio/%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80%D0%BD%D1%8B%D0%B5-%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8/%D0%BF%D1%80%D0%B5%D0%BA%D1%82%D1%8B/</guid>
+      <description>&lt;h2 id=&#34;приложения-разработанные-на-python-с-фреймворком-flask-для-прохождения-чекинаторов-на-учебных-занятиях&#34;&gt;Приложения, разработанные на Python с фреймворком Flask, для прохождения чекинаторов на учебных занятиях&lt;/h2&gt;&#xA;&lt;h3 id=&#34;постановка-задачи&#34;&gt;Постановка задачи&lt;/h3&gt;&#xA;&lt;p&gt;Напишите корневой адрес (со слэшем на конце) работающего по https веб-приложения (например, на repl.it), которое (A) по маршруту вида /DDMMYY c текущей датой (например /021023) выдаёт заголовок Content-Type с JSON-типом и в качестве контента объект, у которого есть поле date с текстовым значением, равным сегодняшней дате в формате DD-MM-YYYY и поле login с текстовым значением, равным вашему логину . (Б) по маршруту вида /api/rv/abc (где abc – ПРОИЗВОЛЬНАЯ строка длиной не менее 1 символа, состоящая только из строчных латинских букв) сервер должен возвращать перевёрнутую строку, например cba&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

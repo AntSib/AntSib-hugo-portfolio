@@ -2,3 +2,48 @@ baseURL = 'https://antsib.github.io/AntSib-hugo-portfolio/'
 languageCode = 'en-us'
 title = 'AntSib Portfolio'
 theme = "hugo-theme-m10c"
+
+[menu]
+  [[menu.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 1
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "Компьютерный практикум"
+    name = "Компьютерный практикум"
+    url = "/Компьютерный практикум/"
+    weight = 3
+  [[menu.main]]
+    identifier = "Веб-проектирование"
+    name = "Веб-проектирование"
+    url = "/Веб-проектирование/"
+    weight = 4
+  [[menu.main]]
+    identifier = "Серверные веб-технологии"
+    name = "Серверные веб-технологии"
+    url = "/Серверные веб-технологии/"
+    weight = 5
+
+
+
+[params]
+  author = "Сибилев А.И."
+  description = "Портфолио работ, выполненный по направлениям Веб-проектирование, Серверные веб-технологии, Компьютерный практикум"
+  menu_item_separator = " - "
+
+    [[params.social]]
+        icon = "brand-telegram"
+        name = "Telegram"
+        url = "https://t.me/Noxpinch"
+
+    [[params.social]]
+        icon = "brand-github"
+        name = "My Github"
+        url = "https://github.com/AntSib"
