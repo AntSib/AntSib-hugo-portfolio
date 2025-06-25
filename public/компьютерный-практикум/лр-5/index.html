@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en-us">
+  <head><script src="/AntSib-hugo-portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=AntSib-hugo-portfolio/livereload" data-no-instant defer></script>
+    <title>Лабораторная работа №5 - WebAssembly // AntSib Portfolio</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.147.3">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Сибилев А.И." />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/AntSib-hugo-portfolio/css/main.min.5b1fcc8902588589c4767187402a3c29f8b8d7a6fdef6d9f8f77045bb0d14fee.css" />
+    
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Лабораторная работа №5 - WebAssembly">
+  <meta name="twitter:description" content="Отчёт Репозиторий с исходным кодом
+Установка компилятора Emscripten Для сборки проекта был установлен компилятор Emscripten, выполнены следующие шаги:
+Установлена система Emscripten SDK согласно инструкции:
+git clone https://github.com/emscripten-core/emsdk.git cd emsdk ./emsdk install latest ./emsdk activate latest source ./emsdk_env.sh Проверена корректность установки командой
+emcc -v Сборка и запуск проекта Компиляция Был использован следующий командный шаблон для сборки C-кода в WebAssembly:
+emcc main.c -o index.js -s WASM=1 -O2 \ -s EXPORTED_RUNTIME_METHODS=&#39;[&#34;stringToUTF8&#34;,&#34;UTF8ToString&#34;]&#39; \ -s EXPORTED_FUNCTIONS=&#39;[&#34;_main&#34;,&#34;_jsAddExpense&#34;,&#34;_jsDeleteExpense&#34;,&#34;_jsClearAllExpenses&#34;,&#34;_jsGetTotalExpenses&#34;,&#34;_jsGetExpenseCount&#34;,&#34;_jsGetCategoryCount&#34;,&#34;_getExpenseJSON&#34;,&#34;_getCategoryTotalJSON&#34;,&#34;_freeMemory&#34;,&#34;_malloc&#34;,&#34;_free&#34;]&#39; \ --shell-file index.html -s ALLOW_MEMORY_GROWTH=1 После успешной компиляции были созданы следующие файлы:">
+
+    <meta property="og:url" content="http://localhost:1313/AntSib-hugo-portfolio/%D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D1%8B%D0%B9-%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D1%83%D0%BC/%D0%BB%D1%80-5/">
+  <meta property="og:site_name" content="AntSib Portfolio">
+  <meta property="og:title" content="Лабораторная работа №5 - WebAssembly">
+  <meta property="og:description" content="Отчёт Репозиторий с исходным кодом
+Установка компилятора Emscripten Для сборки проекта был установлен компилятор Emscripten, выполнены следующие шаги:
+Установлена система Emscripten SDK согласно инструкции:
+git clone https://github.com/emscripten-core/emsdk.git cd emsdk ./emsdk install latest ./emsdk activate latest source ./emsdk_env.sh Проверена корректность установки командой
+emcc -v Сборка и запуск проекта Компиляция Был использован следующий командный шаблон для сборки C-кода в WebAssembly:
+emcc main.c -o index.js -s WASM=1 -O2 \ -s EXPORTED_RUNTIME_METHODS=&#39;[&#34;stringToUTF8&#34;,&#34;UTF8ToString&#34;]&#39; \ -s EXPORTED_FUNCTIONS=&#39;[&#34;_main&#34;,&#34;_jsAddExpense&#34;,&#34;_jsDeleteExpense&#34;,&#34;_jsClearAllExpenses&#34;,&#34;_jsGetTotalExpenses&#34;,&#34;_jsGetExpenseCount&#34;,&#34;_jsGetCategoryCount&#34;,&#34;_getExpenseJSON&#34;,&#34;_getCategoryTotalJSON&#34;,&#34;_freeMemory&#34;,&#34;_malloc&#34;,&#34;_free&#34;]&#39; \ --shell-file index.html -s ALLOW_MEMORY_GROWTH=1 После успешной компиляции были созданы следующие файлы:">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="компьютерный-практикум">
+    <meta property="article:published_time" content="2025-06-06T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-06-06T00:00:00+00:00">
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="/AntSib-hugo-portfolio/"><img class="app-header-avatar" src="/AntSib-hugo-portfolio/avatar.jpg" alt="Сибилев А.И." /></a>
+      <span class="app-header-title">AntSib Portfolio</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/AntSib-hugo-portfolio/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/AntSib-hugo-portfolio/about/">About</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/AntSib-hugo-portfolio/%D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D1%8B%D0%B9-%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D1%83%D0%BC/">Компьютерный практикум</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/AntSib-hugo-portfolio/%D0%B2%D0%B5%D0%B1-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/">Веб-проектирование</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/AntSib-hugo-portfolio/%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80%D0%BD%D1%8B%D0%B5-%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8/">Серверные веб-технологии</a>
+      </nav>
+      <p>Портфолио работ, выполненный по направлениям Веб-проектирование, Серверные веб-технологии, Компьютерный практикум</p>
+      <div class="app-header-social">
+        
+          <a href="https://t.me/Noxpinch" target="_blank" rel="noreferrer noopener me">
+            <svg class="icon icon-brand-telegram" viewBox="0 0 24 24" fill="currentColor"><title>Telegram</title><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          </a>
+        
+          <a href="https://github.com/AntSib" target="_blank" rel="noreferrer noopener me">
+            <svg class="icon icon-brand-github" viewBox="0 0 24 24" fill="currentColor"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Лабораторная работа №5 - WebAssembly</h1>
+      <div class="post-meta">
+        <div>
+          <svg class="icon icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          Jun 6, 2025
+        </div>
+        <div>
+          <svg class="icon icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>clock</title><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          2 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h3 id="отчёт">Отчёт</h3>
+<p><a href="https://github.com/AntSib/Computer_practicum/tree/main/%D0%9B%D0%A0-5%20WebAssembly">Репозиторий с исходным кодом</a></p>
+<h3 id="установка-компилятора-emscripten">Установка компилятора Emscripten</h3>
+<p>Для сборки проекта был установлен компилятор Emscripten, выполнены следующие шаги:</p>
+<p>Установлена система Emscripten SDK согласно инструкции:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/emscripten-core/emsdk.git
+</span></span><span style="display:flex;"><span>cd emsdk
+</span></span><span style="display:flex;"><span>./emsdk install latest
+</span></span><span style="display:flex;"><span>./emsdk activate latest
+</span></span><span style="display:flex;"><span>source ./emsdk_env.sh
+</span></span></code></pre></div><p>Проверена корректность установки командой</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>emcc -v
+</span></span></code></pre></div><h3 id="сборка-и-запуск-проекта">Сборка и запуск проекта</h3>
+<p>Компиляция
+Был использован следующий командный шаблон для сборки C-кода в WebAssembly:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>emcc main.c -o index.js -s WASM<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> -O2 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-s EXPORTED_RUNTIME_METHODS<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;[&#34;stringToUTF8&#34;,&#34;UTF8ToString&#34;]&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-s EXPORTED_FUNCTIONS<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;[&#34;_main&#34;,&#34;_jsAddExpense&#34;,&#34;_jsDeleteExpense&#34;,&#34;_jsClearAllExpenses&#34;,&#34;_jsGetTotalExpenses&#34;,&#34;_jsGetExpenseCount&#34;,&#34;_jsGetCategoryCount&#34;,&#34;_getExpenseJSON&#34;,&#34;_getCategoryTotalJSON&#34;,&#34;_freeMemory&#34;,&#34;_malloc&#34;,&#34;_free&#34;]&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--shell-file index.html -s ALLOW_MEMORY_GROWTH<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><p>После успешной компиляции были созданы следующие файлы:</p>
+<ul>
+<li>index.js (JavaScript-обёртка)</li>
+<li>index.wasm (модуль WebAssembly)</li>
+</ul>
+<h3 id="запуск">Запуск</h3>
+<p>Проект был запущен локально с использованием Python:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 -m http.server <span style="color:#ae81ff">8000</span>
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<h3 id="улучшение-среднее-значение-расходов-за-год">Улучшение: Среднее значение расходов за год</h3>
+<p>Одним из логичных расширений функциональности является добавление вычисления среднего значения расходов за год. Это позволяет пользователю получить более наглядное представление о среднем уровне своих трат.</p>
+<p>Была начата разработка нужного функционала в файле main.c:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#define MAX_CATEGORY_NAME 64
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">struct</span> Expense {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> year;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">char</span> category[MAX_CATEGORY_NAME];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">double</span> amount;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">struct</span> Expense<span style="color:#f92672">*</span> next;
+</span></span><span style="display:flex;"><span>} Expense;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">struct</span> CategoryTotalYearly {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> year;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">char</span> category[MAX_CATEGORY_NAME];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">double</span> total;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">struct</span> CategoryTotalYearly<span style="color:#f92672">*</span> next;
+</span></span><span style="display:flex;"><span>} CategoryTotalYearly;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">static</span> Expense<span style="color:#f92672">*</span> expenses_head <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">static</span> CategoryTotalYearly<span style="color:#f92672">*</span> totals_head <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Add an expense to the linked list
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">add_expense</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> date, <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> category, <span style="color:#66d9ef">double</span> amount, <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> description) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> year <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_year</span>(date);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Expense<span style="color:#f92672">*</span> new_expense <span style="color:#f92672">=</span> (Expense<span style="color:#f92672">*</span>)<span style="color:#a6e22e">malloc</span>(<span style="color:#66d9ef">sizeof</span>(Expense));
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>new_expense) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">perror</span>(<span style="color:#e6db74">&#34;Failed to allocate memory&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">exit</span>(EXIT_FAILURE);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    new_expense<span style="color:#f92672">-&gt;</span>year <span style="color:#f92672">=</span> year;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">strncpy</span>(new_expense<span style="color:#f92672">-&gt;</span>category, category, MAX_CATEGORY_NAME <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    new_expense<span style="color:#f92672">-&gt;</span>category[MAX_CATEGORY_NAME <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;\0&#39;</span>;
+</span></span><span style="display:flex;"><span>    new_expense<span style="color:#f92672">-&gt;</span>amount <span style="color:#f92672">=</span> amount;
+</span></span><span style="display:flex;"><span>    new_expense<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> expenses_head;
+</span></span><span style="display:flex;"><span>    expenses_head <span style="color:#f92672">=</span> new_expense;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Helper: Find or create a CategoryTotalYearly entry
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>CategoryTotalYearly<span style="color:#f92672">*</span> <span style="color:#a6e22e">find_or_create_total</span>(<span style="color:#66d9ef">int</span> year, <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> category) {
+</span></span><span style="display:flex;"><span>    CategoryTotalYearly<span style="color:#f92672">*</span> curr <span style="color:#f92672">=</span> totals_head;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (curr) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (curr<span style="color:#f92672">-&gt;</span>year <span style="color:#f92672">==</span> year <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">strcmp</span>(curr<span style="color:#f92672">-&gt;</span>category, category) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> curr;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        curr <span style="color:#f92672">=</span> curr<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Not found, create new
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    CategoryTotalYearly<span style="color:#f92672">*</span> new_total <span style="color:#f92672">=</span> (CategoryTotalYearly<span style="color:#f92672">*</span>)<span style="color:#a6e22e">malloc</span>(<span style="color:#66d9ef">sizeof</span>(CategoryTotalYearly));
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>new_total) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">perror</span>(<span style="color:#e6db74">&#34;Failed to allocate memory&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">exit</span>(EXIT_FAILURE);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    new_total<span style="color:#f92672">-&gt;</span>year <span style="color:#f92672">=</span> year;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">strncpy</span>(new_total<span style="color:#f92672">-&gt;</span>category, category, MAX_CATEGORY_NAME <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    new_total<span style="color:#f92672">-&gt;</span>category[MAX_CATEGORY_NAME <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;\0&#39;</span>;
+</span></span><span style="display:flex;"><span>    new_total<span style="color:#f92672">-&gt;</span>total <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.0</span>;
+</span></span><span style="display:flex;"><span>    new_total<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> totals_head;
+</span></span><span style="display:flex;"><span>    totals_head <span style="color:#f92672">=</span> new_total;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> new_total;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Calculate totals per category per year
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">calculate_expense_totals</span>() {
+</span></span><span style="display:flex;"><span>    CategoryTotalYearly<span style="color:#f92672">*</span> temp;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Clear previous totals
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span> (totals_head) {
+</span></span><span style="display:flex;"><span>        temp <span style="color:#f92672">=</span> totals_head;
+</span></span><span style="display:flex;"><span>        totals_head <span style="color:#f92672">=</span> totals_head<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">free</span>(temp);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (Expense<span style="color:#f92672">*</span> e <span style="color:#f92672">=</span> expenses_head; e <span style="color:#f92672">!=</span> NULL; e <span style="color:#f92672">=</span> e<span style="color:#f92672">-&gt;</span>next) {
+</span></span><span style="display:flex;"><span>        CategoryTotalYearly<span style="color:#f92672">*</span> total_entry <span style="color:#f92672">=</span> <span style="color:#a6e22e">find_or_create_total</span>(e<span style="color:#f92672">-&gt;</span>year, e<span style="color:#f92672">-&gt;</span>category);
+</span></span><span style="display:flex;"><span>        total_entry<span style="color:#f92672">-&gt;</span>total <span style="color:#f92672">+=</span> e<span style="color:#f92672">-&gt;</span>amount;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Cleanup memory
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">free_all_expenses</span>() {
+</span></span><span style="display:flex;"><span>    Expense<span style="color:#f92672">*</span> temp;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (expenses_head) {
+</span></span><span style="display:flex;"><span>        temp <span style="color:#f92672">=</span> expenses_head;
+</span></span><span style="display:flex;"><span>        expenses_head <span style="color:#f92672">=</span> expenses_head<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">free</span>(temp);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    CategoryTotalYearly<span style="color:#f92672">*</span> ttemp;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (totals_head) {
+</span></span><span style="display:flex;"><span>        ttemp <span style="color:#f92672">=</span> totals_head;
+</span></span><span style="display:flex;"><span>        totals_head <span style="color:#f92672">=</span> totals_head<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">free</span>(ttemp);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Однако из-за сложности интеграции функционала языка C в JavaScript проект не был завершен.</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
